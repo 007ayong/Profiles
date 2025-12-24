@@ -1,0 +1,18 @@
+#!name = 说得AI
+#!desc = VIP会员
+#!openUrl = https://apps.apple.com/us/app/id1569376400
+#!author = ayong[https://github.com/007ayong]
+#!tag = 解锁会员
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/007ayong/Profiles
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a6/5a/ed/a65aeda7-851b-88b3-f0f6-179fe23322cf/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/400x400ia-75.webp
+#!date = 2025-12-24 16:04
+
+[Rewrite]
+^https?:\/\/api-pascal\.vistring\.com\/v\d\/user_benefits\/point response-body-json-replace available_point 999999
+^https?:\/\/api-pascal\.vistring\.com\/v\d\/user_benefits\/membership response-body-json-replace is_vip true max_stt_allowance 99 user_type svip max_daily_allowance 99 payment_type permanent vip_type svip permanent true expired_at 2035-11-09T21:51:12+0800 membership_tier com.vistring.vlogger.vip_membership.perpetual
+
+[MitM]
+hostname = *.vistring.com
